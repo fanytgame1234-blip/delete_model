@@ -1,4 +1,4 @@
--- Fix Lag cho (ẩn model) cho Dead rails
+-- Fix Lag cho (ẩn model) Dead rails
 
 -- Danh sách model cần ẩn
 local modelNames = {
@@ -34,4 +34,5 @@ local function hideAll()
 end
 
 hideAll()
+
 print("✅ Đã ẩn toàn bộ model trong game mới")
