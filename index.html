@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share Script</title>
+<style>
+    body {
+        background-color: #000; /* nền đen */
+        color: #fff; /* chữ trắng */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 14px;
+        color: #ff0000; /* chữ đỏ */
+        font-weight: bold;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    textarea {
+        width: 100%;
+        max-width: 600px;
+        height: 180px;
+        padding: 10px;
+        font-size: 14px;
+        font-family: monospace;
+        background-color: #111;
+        color: #fff;
+        border: 2px solid #ff0000;
+        border-radius: 5px;
+        resize: none;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #000;
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 14px;
+        border: 2px solid #ff0000;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    button:hover {
+        background-color: #ff0000;
+        color: #000;
+    }
+</style>
+</head>
+<body>
+    <div class="header">script được tìm bởi fan_game1234</div>
+    <div class="container">
+        <textarea id="scriptArea" readonly>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/anuragaming1/Meow_gaming/refs/heads/main/Servervip.lua.txt"))()
+        </textarea>
+        <button onclick="copyScript()">COPY SCRIPT</button>
+    </div>
+
+<script>
+function copyScript() {
+    const textarea = document.getElementById('scriptArea');
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // cho mobile
+    document.execCommand('copy');
+    alert("Đã copy script!"); 
+}
+</script>
+</body>
+</html>
