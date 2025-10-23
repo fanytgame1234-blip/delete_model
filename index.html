@@ -64,7 +64,9 @@
     <div class="header">script được tìm bởi fan_game1234</div>
     <div class="container">
         <textarea id="scriptArea" readonly>
-loadstring(game:HttpGet("https://raw.githubusercontent.com/anuragaming1/Meow_gaming/refs/heads/main/Servervip.lua.txt"))()
+getgenv().Version = "V1" -- 1-3
+getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TlDinhKhoi/Xeter/refs/heads/main/Main.lua"))()
         </textarea>
         <button onclick="copyScript()">COPY SCRIPT</button>
     </div>
@@ -79,4 +81,5 @@ function copyScript() {
 }
 </script>
 </body>
+
 </html>
